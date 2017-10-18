@@ -18,6 +18,12 @@ public class LockMain {
 
         for (int i = 0; i < 10; i++){
             threads[i].start();
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
